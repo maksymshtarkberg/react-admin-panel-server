@@ -14,9 +14,9 @@ app.use("/auth", authRouter);
 const start = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://plens:k73couYMhGKQMEHd@cluster0.q1b29nr.mongodb.net/?retryWrites=true&w=majority"
+      "mongodb+srv://barberrybar:Mb4BYDmbVgHc3Dsn@cluster0.egdpv1u.mongodb.net/?retryWrites=true&w=majority"
     );
-    app.listen(PORT, console.log("success"));
+    app.listen(PORT, () => console.log("Server is running on port:", PORT));
   } catch (error) {
     console.log(error);
   }

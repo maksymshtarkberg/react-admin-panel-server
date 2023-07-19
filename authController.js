@@ -91,8 +91,11 @@ class authController {
 
   async getUsers(require, response) {
     try {
-      const users = await User.find();
-      return response.json(users);
+      // const users = await User.find();
+      // return response.json(users);
+      const userRole = new Role();
+      await userRole.save();
+      response.json("server work");
     } catch (error) {
       con;
     }
